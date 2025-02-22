@@ -26,4 +26,10 @@ public class MessageController {
     public String restCall(){
         return "Hello from BridgeLabz";
     }
+
+    //UC-4 Hello World App
+    @GetMapping
+    public String hello() {
+        return "Hello, World!";
+    }
 }

@@ -53,5 +53,16 @@ public class MessageController {
         return "Hello from BridgeLabz with Logging";
     }
 
+    //UC-3 demonstrate Dependency Injection
+    private final EmployeeBean employee;
+
+    public MessageController(EmployeeBean employee) {
+        this.employee = employee;
+    }
+
+    @GetMapping("/details")
+    public String displayDetails() {
+        return employee.getEmployeeDetails();
+    }
 
 }

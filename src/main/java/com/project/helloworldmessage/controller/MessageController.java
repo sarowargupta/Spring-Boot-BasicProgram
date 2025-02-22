@@ -1,9 +1,11 @@
 package com.project.helloworldmessage.controller;
-import org.springframework.stereotype.Controller;
+
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-@Controller
+@RestController
 public class MessageController {
 
     //UC-1 Helloworld Spring App to display
@@ -17,5 +19,11 @@ public class MessageController {
     public String say(Model model) {
         model.addAttribute("message", "Hello from BridgeLabz");
         return "hello"; // Corresponds to hello.html in templates
+    }
+
+    //UC-3 Helloworld Spring App to display by use Rest Controller
+    @RequestMapping("/")
+    public String restCall(){
+        return "Hello from BridgeLabz";
     }
 }

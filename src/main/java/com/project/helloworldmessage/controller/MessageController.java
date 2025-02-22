@@ -32,4 +32,12 @@ public class MessageController {
     public String hello() {
         return "Hello, World!";
     }
+
+    //SPRING CONCEPT
+
+    //UC-1 project to learn spring concept
+    @GetMapping("/uc1")
+    public String UC1() {
+        return "learn spring concept";
+    }
 }
